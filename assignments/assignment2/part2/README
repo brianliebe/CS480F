@@ -1,0 +1,34 @@
+USAGE: ./part2 <minimum dimension> <maximum dimension> <number of points> <optional: 0 or 1>
+
+**************
+ARGUMENT INFO:
+**************
+
+Minimum Dimension: If you want to output data for dimensions 2 to 16, this value would be 2.
+Maximum Dimension: If you want to output data for dimensions 2 to 16, this value would be 16.
+   NOTE: To see speedup for one dimension, make these the same value. Non-OpenMP will only run on the lowest dimension.
+Number of Points: Obvious, but higher number of points will give better data to the Python graphs.
+Optional Value: Leave blank or put a 0 for to export percentage/dimension/distance data to the .csv file (scatter.py or surface.py).
+   NOTE: Use 1 if you're just exporting one dimension (exports the points' information (x,y,x etc), not the %/dim/distance data)
+
+***************
+PYTHON SCRIPTS:
+***************
+
+plotsphere.py: Only use if you've run "./part2 3 3 <num points> 1", because this just plots a sphere, and it takes point data as input
+   NOTE: This shows the uniform distribution of points for 3 dimensions using the alogorithm I implemented.
+scatter.py: A scatter plot of the data, plots percentage vs. dimension vs. distance
+surface.py: A surface plot of the data, plots percentage vs. dimension vs. distance
+
+*************
+EXTRA CREDIT:
+*************
+
+To check for the better point generation algorithm (200 dims, 10000 points was 0.59 sec sequential and 0.34 parallel):
+   ./part2 50 50 10000
+To check for uniform distribution of points (obvious on three dimensions):
+   ./part2 3 3 10000 1
+   python ./plotsphere.py
+To check for the matplotlib graphs:
+   ./part2 2 16 10000
+   python ./surface.py OR python ./scatter.py
