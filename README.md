@@ -27,3 +27,5 @@ The CNN consisted of several layers, including two dense layers, the softmax lay
 The CNN works by using thousands of weights that are adjusted on each iteration, and then trained to better recognize each letter. 
 CUDA was worked into the design of the CNN to help speed up some aspects of the program, primarily for training. 
 CUDA works by copying the arrays onto a GPU and quickly generate answers using thousands of threads at once.
+
+*\* All work is my own and not available for use under any circumstances without my written permission*
